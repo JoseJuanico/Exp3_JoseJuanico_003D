@@ -1,0 +1,367 @@
+<ion-header>
+  <ion-toolbar class="head">
+    <ion-buttons slot="start">
+      <ion-back-button
+      defaultHref="/"
+      color="primary"
+      text="Atrás"
+      mode="ios"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title><h5>Top musical</h5></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="cont">
+  <br>
+  <br>
+
+    <h1 class="titlePlaylist" style="text-align: center;">Playlist más escuchadas en spotify</h1>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12"
+                  *ngFor ="let music of musica; let i= index"> 
+            <ion-card  color="dark">
+              <ion-card-header>
+                <ion-card-title class="nameTitle">{{music.name}}</ion-card-title>
+              </ion-card-header> 
+              <ion-card-content>
+                <ion-img  *ngFor="let img of music.images"[src]="img.url"></ion-img> <br>
+                <p class="description">{{music.description}}</p> <br>
+                <ion-button  class="btnPlaylist" href="{{music.external_urls.spotify}}" expand="full"  target="_blank" shape="round">
+                  Escuchar playlist 
+                </ion-button>
+                
+              </ion-card-content>
+              
+              
+
+
+            </ion-card>
+        </ion-col>  
+      </ion-row>
+    </ion-grid>
+    <h1 class="titlePlaylist">Canciones más escuchadas</h1><br>
+  <ion-card id="hola" style="--ion-background-color: rgb(19, 18, 18);">
+    <ion-card-content>
+      <h1 class="tituloTop">Reggaetón</h1>
+  <h4 class="subtituloTop">Lo mas escuchado:</h4>
+   <ion-list>
+    <ion-item class="itemLista">
+      <ion-label class="nombreCancion">Pa que retozen - Tego Calderon</ion-label>
+      <ion-button  class="btnReproducir"fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=PnpEOtzb668&ab_channel=TegoCalderon-Topic">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button  class="btnReproducir"(click)="presentAlert1()"fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="itemLista">
+      <ion-label class="nombreCancion">"Rebota Remix" Guaynaa / Nicky Jam / Farruko con Becky G & Sech</ion-label>
+      <ion-button class="btnReproducir"fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=slaS1z9eHT4&ab_channel=Guaynaa">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button class="btnReproducir"(click)="presentAlert2()" fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="itemLista">
+      <ion-label class="nombreCancion">El Alfa El Jefe - SUAVE (Remix) Ft. Chencho "Plan B", Bryant Myers, Noriel, Jon Z, Miky Woodz</ion-label>
+      <ion-button class="btnReproducir" fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=SpRpfev01n0&ab_channel=ElAlfaElJefeTV">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button class="btnReproducir"(click)="presentAlert3()" fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="itemLista">
+      <ion-label class="nombreCancion">BAD BUNNY x ÑENGO FLOW - QUE MALO</ion-label>
+      <ion-button  class="btnReproducir"fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=-4kAkkIw8JI&ab_channel=BadBunny">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button  class="btnReproducir"(click)="presentAlert4()" fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="itemLista">
+      <ion-label class="nombreCancion">105F RMX - Kevvo FT Farruko, Myke Towers, Arcangel, Darell, Ñengo Flow, Brytiago, Chencho Corleone</ion-label>
+      <ion-button  class="btnReproducir"fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=qA6FBDYncGk&ab_channel=MrPepeQuintana">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button  class="btnReproducir"(click)="presentAlert5()" fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+    </ion-card-content>
+  </ion-card>
+  <br>
+<br>
+<br>
+<ion-card style="--ion-background-color: rgb(19, 18, 18);">
+  <ion-card-content>
+    <h1 class="tituloTop">Electrónica</h1>
+  <h4 class="subtituloTop">Lo mas escuchado:</h4>
+   <ion-list>
+    <ion-item class="itemLista">
+      <ion-label class="nombreCancion">The Weeknd - Can't Feel My Face (Martin Garrix Remix)</ion-label>
+      <ion-button  class="btnReproducir"fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=bBKrHm6qerI&ab_channel=CanKurultay">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button class="btnReproducir" (click)="presentAlert6()"fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="itemLista">
+      <ion-label class="nombreCancion">Dash Berlin ft. Emma Hewitt - Waiting</ion-label>
+      <ion-button  class="btnReproducir"fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=YYrZsH32rF8&ab_channel=DashBerlin">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button  class="btnReproducir"(click)="presentAlert7()" fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="itemLista">
+      <ion-label class="nombreCancion">Crystal Rock, Felix Schorn & Flip Capella - Hypnotized [ft Stephanie Schulte] </ion-label>
+      <ion-button  class="btnReproducir"fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=4DKvv53tw7I&ab_channel=toughstuffmusictv">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button  class="btnReproducir"(click)="presentAlert8()" fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="itemLista">
+      <ion-label class="nombreCancion">David Guetta & MORTEN – Impossible (ft. John Martin)</ion-label>
+      <ion-button class="btnReproducir" fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=zhqqcNafowU&ab_channel=DavidGuetta">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button  class="btnReproducir"(click)="presentAlert9()" fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="itemLista">
+      <ion-label class="nombreCancion">Aly & Fila meets Roger Shah feat Adrina Thorpe - Perfect Love</ion-label>
+      <ion-button  class="btnReproducir"fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=fHJjLHiKuL4&ab_channel=ArmadaMusic">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button  class="btnReproducir"(click)="presentAlert10()" fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+  </ion-card-content>
+</ion-card>
+  
+<br>
+<br>
+<br>
+<ion-card style="--ion-background-color: rgb(19, 18, 18);">
+  <ion-card-content>
+    <h1 class="tituloTop">Hip-Hop</h1>
+  <h4 class="subtituloTop">Lo mas escuchado:</h4>
+   <ion-list>
+    <ion-item class="itemLista">
+      <ion-label class="nombreCancion">Dr. Dre ft. Snoop Dogg, Kurupt, Nate Dogg - The Next Episode</ion-label>
+      <ion-button  class="btnReproducir"fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=QZXc39hT8t4&ab_channel=DrDreVEVO">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button  class="btnReproducir"(click)="presentAlert11()"fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="itemLista">
+      <ion-label class="nombreCancion">Eminem - Lose Yourself </ion-label>
+      <ion-button  class="btnReproducir"fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=7YuAzR2XVAM&ab_channel=EminemExplicit">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button class="btnReproducir" (click)="presentAlert12()" fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="itemLista">
+      <ion-label class="nombreCancion">Movimiento Original - Grandes Pasos</ion-label>
+      <ion-button  class="btnReproducir"fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=aNX2K81pf5E&ab_channel=MovOriginalVEVO">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button  class="btnReproducir"(click)="presentAlert13()" fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="itemLista">
+      <ion-label class="nombreCancion">Liricistas - Estilo Libre</ion-label>
+      <ion-button  class="btnReproducir"fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=FH32HtwsC7c&ab_channel=Liricistas">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button  class="btnReproducir"(click)="presentAlert14()" fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="itemLista">
+      <ion-label class="nombreCancion">THE SCOTTS, Travis Scott, Kid Cudi - THE SCOTTS</ion-label>
+      <ion-button  class="btnReproducir"fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=sw4r0k8WWqU&ab_channel=TravisScottVEVO">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button class="btnReproducir" (click)="presentAlert15()" fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  </ion-card-content>
+</ion-card>
+  <br>
+<br>
+<br>
+<ion-card style="--ion-background-color: rgb(19, 18, 18);">
+  <ion-card-content>
+    <h1 class="tituloTop">Cumbia</h1>
+  <h4 class="subtituloTop">Lo mas escuchado:</h4>
+   <ion-list>
+    <ion-item class="itemLista">
+      <ion-label class="nombreCancion">Amar Azul - Me Pega la Cerveza</ion-label>
+      <ion-button  class="btnReproducir"fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=_HjiwHYSWd0&ab_channel=AmarAzul-Topic">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button  class="btnReproducir"(click)="presentAlert16()"fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="itemLista">
+      <ion-label class="nombreCancion">Rafaga - Suave</ion-label>
+      <ion-button  class="btnReproducir"fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=0zx-6cAAjzc&ab_channel=CumbiaTube">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button  class="btnReproducir"(click)="presentAlert17()" fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="itemLista">
+      <ion-label  class="nombreCancion">Amar Azul- Yo Tomo Licor</ion-label>
+      <ion-button  class="btnReproducir"fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=U1FKs6yBbmo&ab_channel=AmarAzul-Topic">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button  class="btnReproducir"(click)="presentAlert18()" fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="itemLista">
+      <ion-label class="nombreCancion">La Cumbia - Porque te Amo</ion-label>
+      <ion-button class="btnReproducir" fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=t_sAFW3jwBU&ab_channel=CumbiaTube">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button  class="btnReproducir"(click)="presentAlert19()" fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="itemLista">
+      <ion-label class="nombreCancion">Noche de Brujas - Me gusta todo de ti</ion-label>
+      <ion-button  class="btnReproducir"fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=b7FdV0aSAe0&ab_channel=NochedeBrujas-Topic">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button  class="btnReproducir"(click)="presentAlert20()" fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+  </ion-card-content>
+</ion-card>
+  
+  <br>
+<br>
+<br>
+<ion-card style="--ion-background-color: rgb(19, 18, 18);">
+  <ion-card-content>
+    <h1 class="tituloTop">Rock</h1>
+  <h4 class="subtituloTop">Lo mas escuchado:</h4>
+   <ion-list>
+    <ion-item class="itemLista">
+      <ion-label class="nombreCancion">AC/DC - Back In Black</ion-label>
+      <ion-button class="btnReproducir" fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=pAgnJDJN4VA&ab_channel=acdcVEVO">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button  class="btnReproducir"(click)="presentAlert21()"fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="itemLista">
+      <ion-label class="nombreCancion">Guns N' Roses - Welcome To The Jungle</ion-label>
+      <ion-button class="btnReproducir" fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=o1tj2zJ2Wvg&ab_channel=GunsNRosesVEVO">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button  class="btnReproducir"(click)="presentAlert22()" fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="itemLista">
+      <ion-label class="nombreCancion">Queen - Another One Bites the Dust</ion-label>
+      <ion-button  class="btnReproducir"fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=rY0WxgSXdEE&ab_channel=QueenOfficial">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button  class="btnReproducir"(click)="presentAlert23()" fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="itemLista">
+      <ion-label class="nombreCancion">Metallica - The UnforgivenLabel</ion-label>
+      <ion-button  class="btnReproducir"fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=Ckom3gf57Yw&ab_channel=WarnerRecordsVault">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button  class="btnReproducir"(click)="presentAlert24()" fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="itemLista">
+      <ion-label class="nombreCancion">Survivor - Eye of the Tiger</ion-label>
+      <ion-button  class="btnReproducir"fill="none" slot="end" shape="round" target="blank" href="https://www.youtube.com/watch?v=S-LO6dctBms&ab_channel=Survivor-Topic">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button class="btnReproducir" (click)="presentAlert25()" fill="none" slot="end" shape="round">
+        <ion-icon name="receipt-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+  </ion-card-content>
+</ion-card>
+  
+  <br>
+    <br>
+    <br>
+  <ion-card class='redes'>
+    
+    <ion-card-header>
+      <ion-card-title><h5 style="color:rgb(148, 161, 180);text-align: center;">No olvides visitar nuestras redes sociales</h5></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+       <ion-button style="padding-left: 50px" size="small" target="blank" href="https://www.facebook.com">
+      <ion-icon slot="icon-only" name="logo-facebook"></ion-icon>
+    </ion-button>
+    <ion-button size="small" target="blank" href="https://www.twitter.com">
+      <ion-icon slot="icon-only" name="Logo-twitter"></ion-icon>
+    </ion-button>
+    <ion-button size="small"target="blank" href="https://www.instagram.com">
+      <ion-icon slot="icon-only" name="logo-instagram"></ion-icon>
+    </ion-button> 
+    </ion-card-content>
+  </ion-card>
+</ion-content>

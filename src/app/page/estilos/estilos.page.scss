@@ -1,0 +1,86 @@
+.head{
+	--ion-background-color:#0c0b0b;
+}
+
+.cont{
+	--ion-background-color: #1a1818;
+}
+
+.cardd{
+	--ion-background-color: #100e13;
+
+}
+
+.tituloTop{
+	text-align: center;
+	color: rgb(15, 84, 214);
+	text-shadow: 1px 1px 1px rgb(2, 29, 80);
+}
+
+
+.subtituloTop{
+	text-align: center;
+	color:rgb(48, 71, 197);
+}
+
+.nombreCancion{
+	font-size: x-small;
+	color: rgb(115, 127, 236);
+}
+
+.nombreCancion:hover{
+	color:chocolate;
+}
+
+.btnReproducir{
+	margin: 0px;
+	color: rgb(46, 175, 63);
+	padding: 0px;
+}
+
+.itemLista{
+	border-bottom: 0px;
+	--ion-item-border-color:var(--ion-background-color);
+}
+
+
+
+.btnReproducir:hover{
+	color:rgb(241, 87, 15);
+}
+
+.carddRR{
+	background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(/assets/elec.jpg);
+	max-width: 100%;
+}
+
+
+.btnPlaylist{
+	color:#141313;
+	font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	text-align: justify;
+}
+
+.btnPlaylist:hover{
+	color:white;
+}
+
+.description{
+	text-align: justify;
+	color: rgb(255, 254, 253);
+}
+
+.titlePlaylist{
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	color:rgb(12, 211, 184);
+	text-align: center;
+
+}
+
+.nameTitle{
+	text-align: center;
+}
+
+.redes{
+	border:0px;
+}

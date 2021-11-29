@@ -1,0 +1,47 @@
+.head{
+	--ion-background-color: #0c0b0b;
+}
+
+.cont{
+	--ion-background-color: #1f1c1c;
+}
+
+.carddH{
+	background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(/assets/fotohiphop.jpg);
+	max-width: 100%;
+}
+.carddR{
+	background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(/assets/regga.jpg);
+	max-width: 100%;
+}
+.carddRo{
+	background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(/assets/roc.jpg);
+	max-width: 100%;
+}
+.carddC{
+	background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(/assets/cum.jpg);
+	max-width: 100%;
+}
+.carddE{
+	background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(/assets/elec.jpg);
+	max-width: 100%;
+}
+.tituloCard{
+	color:rgb(159, 159, 252);
+	text-align: center;
+}
+
+
+.btnTop{
+	--ion-background-color: #1a1818;
+}
+.descripcion{
+	padding-top: 20px;
+	color: rgb(255, 255, 255);
+	text-align: justify;
+}
+
+.carddRedes{
+	color:yellowgreen;
+}
+

@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/e2e", //la salida del testeo se guarda aca, y de esta forma.
+    "module": "commonjs",
+    "target": "es2018",
+    "types": [
+      "jasmine",//framework que esta utilizando, jasmine
+      "node" //esta node porque para correr una test se utiliza el comando node npm run e2e
+    ]
+  }
+}
+//archivo que contiene la confi de las pruebas que vamos a configurar.

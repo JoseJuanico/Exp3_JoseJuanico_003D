@@ -1,0 +1,49 @@
+<ion-header class="head">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button    color="primary"
+      text="Atrás"
+      mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Inicio de Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="cont">
+  <ion-img src="assets/formularioWalpaper.jpg"></ion-img>
+  <ion-card class="cardForm">
+    <ion-item style="--ion-background-color: rgb(194, 189, 189);">
+      <ion-label class="ll" position="floating">Correo Electrónico</ion-label>
+    <ion-input  [(ngModel)]="emailInicio" type="email" placeholder="Ingrese correo electrónico" name="emailInicio"></ion-input>
+    </ion-item>
+   <ion-item style="--ion-background-color: rgb(194, 189, 189);">
+     <ion-label style="text-align: center;" position="floating">Contraseña</ion-label>
+    <ion-input  [(ngModel)]="contraInicio" type="password" placeholder="Ingrese Contraseña" name="contraInicio"></ion-input>
+   </ion-item> 
+   
+    <ion-button expand="block" fill="outline"(click)="Login()"  shape="round">
+    Iniciar Sesión 
+    </ion-button> 
+    <a style="margin-left: 37%;"href="/formulario">Registrarse</a><br><br>
+  </ion-card>
+  <br>
+  
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title><h5 style="color:rgb(148, 161, 180);text-align: center;">No olvides visitar nuestras redes sociales</h5></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+       <ion-button style="padding-left: 50px" size="small" target="blank" href="https://www.facebook.com">
+      <ion-icon slot="icon-only" name="logo-facebook"></ion-icon>
+    </ion-button>
+    <ion-button size="small" target="blank" href="https://www.twitter.com">
+      <ion-icon slot="icon-only" name="Logo-twitter"></ion-icon>
+    </ion-button>
+    <ion-button size="small"target="blank" href="https://www.instagram.com">
+      <ion-icon slot="icon-only" name="logo-instagram"></ion-icon>
+    </ion-button> 
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>

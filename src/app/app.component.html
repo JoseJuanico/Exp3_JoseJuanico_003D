@@ -1,0 +1,23 @@
+<!--generar boton de la hamburguesa programado en app.component.ts-->
+<ion-app>
+  <ion-menu side="start" menuId="first" contentId="main"> <!--ion-menu permite generar el boton hamburguesa, side=start ubica el menu al lado izq, menuId=first es solo el id , contentId=main tambien es solo nombre-->
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title style="color: black;">Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="menuContenido">
+      <ion-list>
+          <ion-menu-toggle *ngFor="let c of componentes">
+          <ion-item  class="itemLista" [routerLink]="c.redirecTo"
+                  detail=true>
+          <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon>
+          {{ c.name }}
+        </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

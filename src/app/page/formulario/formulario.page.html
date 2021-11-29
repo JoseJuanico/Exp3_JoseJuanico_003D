@@ -1,0 +1,102 @@
+<ion-header class="i">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+      defaultHref="/"
+      color="primary"
+      text="Atrás"
+      mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title><h5>Registrarse</h5></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="cont">
+  <ion-card class="cardForm">
+  <ion-card-header>
+    <ion-card-title style="text-align: center;text-decoration: underline;">Formulario de registro</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+
+  <ion-item class="itemForm" style="--ion-background-color: rgb(194, 189, 189);">
+    <ion-label position="floating">Nombre Completo</ion-label>
+    <ion-input required clearInput placeholder="Ingrese nombre"name="nombre" type="text" [(ngModel)]="newUser.nombreCompleto"></ion-input>
+  </ion-item> 
+
+  <ion-item class="itemForm">
+    <ion-label position="floating">Correo</ion-label>
+    <ion-input  pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" required placeholder="ingrese Correo"type="text" name="email" [(ngModel)]="newUser.correo"></ion-input>
+  </ion-item> 
+
+  <ion-item class="itemForm" >
+  <ion-label>Nacimiento:</ion-label>
+  <ion-datetime monthShortNames="Enero, Feb, Marzo, Abril, Mayo, Junio, Julio, Agosto, Sep, Oct, Nov, Dic" name="fechaNacimiento" [(ngModel)]="newUser.nacimiento"  required displayFormat="MMM D YYYY" min="1900" max="2021"></ion-datetime>
+</ion-item>
+
+  <ion-item class="itemForm">
+      <ion-label>Música preferida:</ion-label>
+      <ion-select name="comboEstilo" [(ngModel)]="newUser.musicaPreferida" required placeholder="--">
+        <ion-select-option value="Reggaetón">Reggaetón</ion-select-option>
+        <ion-select-option value="Electrónica">Electrónica</ion-select-option>
+        <ion-select-option value="Hip-Hop">Hip-Hop</ion-select-option>
+        <ion-select-option value="Cumbia">Cumbia</ion-select-option>
+        <ion-select-option value="Rock">Rock</ion-select-option>
+        <ion-select-option value="Otro">Otro</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+  <ion-item class="itemForm">
+    <ion-label position="floating">Contraseña: </ion-label>
+    <ion-input  required maxLength="8" placeholder="8 caracteres máx." type="password" [(ngModel)]="newUser.contrasena"></ion-input>
+  </ion-item> 
+
+  <ion-button (click)="agregarDatos()" expand="block"  shape="round">
+    Agregar Datos
+  </ion-button>
+  </ion-card-content>
+
+
+  
+</ion-card>
+<br>
+<br>
+  
+  
+  <ion-list >
+    <ion-list-header>
+      <ion-label style="font-size: large;text-align: center;color:rgb(52, 94, 11)">Usuarios Registrados</ion-label>
+    </ion-list-header><br>
+      <ion-list >
+        <ion-item-sliding *ngFor= "let user of user">
+          <ion-item style="border-radius: 1px;">
+            <ion-label class="listaIngresados" text-wrap >
+              <ion-label >Nombre: {{user.nombreCompleto}}</ion-label>
+              <ion-label >Correo:   {{user.correo}}</ion-label>
+              <ion-label >Música:   {{user.musicaPreferida}}</ion-label>
+            </ion-label>
+          </ion-item><br>
+        </ion-item-sliding>
+      </ion-list>
+    </ion-list>
+
+  
+ 
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title><h5 style="color:rgb(148, 161, 180);text-align: center;">No olvides visitar nuestras redes sociales</h5></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+       <ion-button style="padding-left: 50px" size="small" target="blank" href="https://www.facebook.com">
+      <ion-icon slot="icon-only" name="logo-facebook"></ion-icon>
+    </ion-button>
+    <ion-button size="small" target="blank" href="https://www.twitter.com">
+      <ion-icon slot="icon-only" name="Logo-twitter"></ion-icon>
+    </ion-button>
+    <ion-button size="small"target="blank" href="https://www.instagram.com">
+      <ion-icon slot="icon-only" name="logo-instagram"></ion-icon>
+    </ion-button> 
+    </ion-card-content>
+  </ion-card>
+</ion-content>
